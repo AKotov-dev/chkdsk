@@ -20,3 +20,5 @@ if [ -z $win ]; then echo "ntfs volumes not found, exit..."; exit; fi
 
 #Демонтаж, проверка, монтирование каждого раздела; (-b tries to fix bad clusters and -d to fix dirty states)
 for vol in $win; do umount -l $vol; ntfsfix -d $vol; mount $vol; done
+
+exit 0;
