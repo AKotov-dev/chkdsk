@@ -9,14 +9,17 @@ clear
 
 #Проверка $UID (root)
 if [ "$UID" -ne "0" ]; then
-  read -p "Root privileges required! Press Enter to Exit..."
-  exit 1
+echo -e "Superuser rights are required to perform the operation! NTFS validation error!\n\
+---\n\
+Ubuntu sample: sudo chkdsk\n\
+Mageia sample: su/password; chkdsk"
+exit 1
 fi;
 
 #Найти все разделы ntfs
 win=$(blkid | grep 'TYPE="ntfs"' | cut -f1 -d':')
 #Разделы не найдены = выйти
-if [ -z $win ]; then echo "ntfs volumes not found, exit..."; exit; fi
+if [ -z $win ]; then echo "ntfs volumes not found, exit..."; exit 1; fi
 
 #Демонтаж, проверка, монтирование каждого раздела; (-b tries to fix bad clusters and -d to fix dirty states)
 for vol in $win; do umount -l $vol; ntfsfix -d $vol; mount $vol; done
