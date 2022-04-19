@@ -14,7 +14,7 @@ if [ "$UID" -ne "0" ]; then
 fi;
 
 #Найти все разделы ntfs
-win=$(blkid | grep ntfs | cut -f1 -d':')
+win=$(blkid | grep 'TYPE="ntfs"' | cut -f1 -d':')
 #Разделы не найдены = выйти
 if [ -z $win ]; then echo "ntfs volumes not found, exit..."; exit; fi
 
