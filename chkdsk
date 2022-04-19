@@ -2,7 +2,7 @@
 
 #---
 #Requires: ntfsprogs (ntfs-3g)
-#Исправление ошибок на ntfs разделе в Linux
+#Исправление ошибок на ntfs-разделах в Linux
 #---
 
 clear
@@ -19,4 +19,4 @@ win=$(blkid | grep ntfs | cut -f1 -d':')
 if [ -z $win ]; then echo "ntfs volumes not found, exit..."; exit; fi
 
 #Демонтаж, проверка, монтирование каждого раздела; (-b tries to fix bad clusters and -d to fix dirty states)
-for disk in $win; do umount -l $disk; ntfsfix -d $disk; mount $disk; done
+for vol in $win; do umount -l $vol; ntfsfix -d $vol; mount $vol; done
