@@ -26,7 +26,7 @@ vendor=alex_q_2000 (C) 2022
 summary=chkdsk: fixing errors on ntfs partition in Linux
 
 [URLCOPY]
-urlcopy=111
+urlcopy=https://github.com/AKotov-dev/chkdsk
 
 [LICENSE]
 license=GPLv3
@@ -65,7 +65,7 @@ deb=1
 4=#gtk-update-icon-cache -q -f /usr/share/icons/hicolor
 
 [URL32]
-url32=1
+url32=https://github.com/AKotov-dev/chkdsk
 
 [URL64]
 url64=
