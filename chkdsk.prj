@@ -2,7 +2,7 @@
 name=chkdsk
 
 [VERSION]
-version=0.1
+version=0.2
 
 [RELEASE]
 release=0.mrx9
@@ -11,7 +11,7 @@ release=0.mrx9
 group=Applications/File
 
 [DESCRIPTION]
-0=Bash script for automatic error correction on ntfs partition in Linux
+0=Bash script for automatic error correction on ntfs partitions in Linux
 1=Just run the command with 'su' privileges: chkdsk
 2=---
 3=More information: /usr/share/doc/package_name/repack.txt
@@ -23,7 +23,7 @@ maintainer=Alex Kotov
 vendor=alex_q_2000 (C) 2022
 
 [SUMMARY]
-summary=chkdsk: fixing errors on ntfs partition in Linux
+summary=chkdsk: fixing errors on ntfs partitions in Linux
 
 [URLCOPY]
 urlcopy=https://github.com/AKotov-dev/chkdsk
@@ -85,3 +85,6 @@ toolversion=unknown
 2=
 3=Sample (RU): https://greendail.ru/node/ispravlenie-oshibok-na-ntfs-razdele-v-linux
 4=Sample (EN): https://askubuntu.com/questions/783324/checking-a-ntfs-drive-with-linux
+5=
+6=v0.2-1
+7=+ fixed multiple NTFS partition search
