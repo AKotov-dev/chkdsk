@@ -11,7 +11,7 @@ release=0.mrx9
 group=Applications/File
 
 [DESCRIPTION]
-0=Bash script for automatic error correction on ntfs partitions in Linux
+0=Bash script for automatic error correction on NTFS partitions in Linux
 1=Just run the command with 'su' privileges: chkdsk
 2=---
 3=More information: /usr/share/doc/package_name/repack.txt
@@ -23,7 +23,7 @@ maintainer=Alex Kotov
 vendor=alex_q_2000 (C) 2022
 
 [SUMMARY]
-summary=chkdsk: fixing errors on ntfs partitions in Linux
+summary=Fixing errors on NTFS partitions in Linux
 
 [URLCOPY]
 urlcopy=https://github.com/AKotov-dev/chkdsk
