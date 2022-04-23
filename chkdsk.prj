@@ -5,7 +5,7 @@ name=chkdsk
 version=0.2
 
 [RELEASE]
-release=0.mrx9
+release=1.mrx9
 
 [GROUP]
 group=Applications/File
