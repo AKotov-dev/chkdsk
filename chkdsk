@@ -9,10 +9,7 @@ clear
 
 #Проверка $UID (root)
 if [ "$UID" -ne "0" ]; then
-echo -e "Superuser rights are required to perform the operation! NTFS validation error!
----
-Ubuntu sample: sudo chkdsk
-Mageia sample: su/password; chkdsk\n"
+echo -e "Superuser rights are required to perform the operation! NTFS checking error!\n"
 exit 1
 fi;
 
@@ -22,6 +19,6 @@ win=$(blkid | grep 'TYPE="ntfs"' | cut -f1 -d':')
 if [ -z "$win" ]; then echo -e "NTFS volumes not found, exit...\n"; exit 1; fi
 
 #Демонтаж, проверка, монтирование каждого раздела; (-b tries to fix bad clusters and -d to fix dirty states)
-for vol in $win; do umount -l $vol; ntfsfix -d $vol; mount $vol; echo; done
+for vol in $win; do umount -l $vol 2>/dev/null; ntfsfix -d $vol; mount $vol 2>/dev/null; echo; done
 
 exit 0;
